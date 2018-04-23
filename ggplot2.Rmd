@@ -1,0 +1,22 @@
+# ggplot2
+
+## Essential grammar
+* Data
+* Aesthetics
+* Geometries
+
+dbase <- c(4,5,6,4,2)
+names(dbase) <- c("India","China","Saudi Arabia","Bulgaria","Morocco")
+dbase
+
+
+str(mtcars)
+summary(mtcars)
+library(ggplot2)
+
+p <- ggplot(mtcars, aes(x = cyl, y = mpg)) + geom_point()
+
+p
+p+coord_polar()
+
+ggplot(mtcars, aes(x = cyl, y = mpg)) + geom_point()
