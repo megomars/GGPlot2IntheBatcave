@@ -5,10 +5,10 @@
 * Aesthetics
 * Geometries
 
+```
 dbase <- c(4,5,6,4,2)
 names(dbase) <- c("India","China","Saudi Arabia","Bulgaria","Morocco")
 dbase
-
 
 str(mtcars)
 summary(mtcars)
@@ -20,3 +20,4 @@ p
 p+coord_polar()
 
 ggplot(mtcars, aes(x = cyl, y = mpg)) + geom_point()
+```
