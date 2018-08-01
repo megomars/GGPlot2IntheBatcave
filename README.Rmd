@@ -2,6 +2,7 @@
 
 GGPlot2 is a data visualization library created by Hadley Wickham. At its core it contains:
 
+![The layers involved](layers.png)
 * Data - dataset being plotted.
 * Aesthetics - scales onto which we map our data.
 * Geometries - The visual elements used for our data.
@@ -10,13 +11,12 @@ GGPlot2 is a data visualization library created by Hadley Wickham. At its core i
 * Coordinates - The space on which the data will be plotted.
 * Themes - All non-data ink.
 
-![The layers involved](layers.png)
 ![The values](values.png)
 
 ## Getting started
 ```{r}
 library(ggplot2)
-ggplot(mtcars, aes(x = cyl, y = mpg)) + geom_point() # a very simple plot
+ggplot(dataset, aes(x = cyl, y = mpg)) + geom_point() # The simplest chart you can make
 ggplot(diamonds, aes(x = carat, y = price, col=clarity)) + geom_point(alpha=0.4)
 ```
 
