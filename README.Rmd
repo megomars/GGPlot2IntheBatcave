@@ -1,6 +1,6 @@
 # GGPlot2 in the Batcave
 
-GGPlot2 is a data visualization library created by Hadley Wickham. At its core it contains:
+GGPlot2 is a data visualization library created by Hadley Wickham. It is based on the "grammar of graphics", an idea that a graph can be built and rebuilt using interchangable components. At its core it contains:
 
 ![The layers involved](layers.png)
 * Data - dataset being plotted.
@@ -16,8 +16,12 @@ GGPlot2 is a data visualization library created by Hadley Wickham. At its core i
 ## Getting started
 ```{r}
 library(ggplot2)
-ggplot(dataset, aes(x = cyl, y = mpg)) + geom_point() # The simplest chart you can make
+
+ggplot(mpg, aes(x = displ)) + geom_bar() # The simplest chart you can make
+qplot(data=mpg, x=cty, y=hwy, geom="point") #Qplot is just a shorthand for ggplot
 ggplot(diamonds, aes(x = carat, y = price, col=clarity)) + geom_point(alpha=0.4)
+milechart <- ggplot(mpg, aes(x=hwy)) + geom_bar()
+ggsave("plot.png", width=10, height=10) #saves the previous chart as a png
 ```
 
 ## Recycle your plots
@@ -30,3 +34,5 @@ p+coord_polar()
 p <- ggplot(dbase)
 
 ```
+
+##Geoms
